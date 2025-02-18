@@ -1,76 +1,159 @@
-Source,Target,Relationship,Additional_Context
-Visa,Processing Time,HAS_ATTRIBUTE,
-Student Visa,Processing Time,HAS_ATTRIBUTE,
-Student Visa,"3 weeks (outside UK)",PROCESSING_TIME_IS,
-Student Visa,Application,HAS_STEP,
-Student Visa,Online Application Form,IS_STEP_IN,Application
-Student Visa,Visa Fee Payment,IS_STEP_IN,Application
-Student Visa,Biometric Information Submission,IS_STEP_IN,Application
-Student Visa,Acceptance Proof,IS_STEP_IN,Application
-Student Visa,UK Educational Institution,RELATED_TO,Acceptance Proof
-Student Visa,Required Documents,HAS_ATTRIBUTE,
-Student Visa,Passport,IS_DOCUMENT,
-Student Visa,CAS Letter,IS_DOCUMENT,
-Student Visa,Financial Evidence,IS_DOCUMENT,
-Student Visa,English Proficiency Proof,IS_DOCUMENT,
-Student Visa,Eligibility Criteria,HAS_ATTRIBUTE,
-Student Visa,Offer from UK Institution,IS_CRITERIA,
-Student Visa,Sufficient Funds,IS_CRITERIA,
-Skilled Worker Visa,Processing Time,HAS_ATTRIBUTE,
-Skilled Worker Visa,"8 weeks",PROCESSING_TIME_IS,
-Skilled Worker Visa,Application,HAS_STEP,
-Skilled Worker Visa,Certificate of Sponsorship,IS_STEP_IN,Application
-Skilled Worker Visa,Online Application,IS_STEP_IN,Application
-Skilled Worker Visa,Visa Fee Payment,IS_STEP_IN,Application
-Skilled Worker Visa,Health Surcharge Payment,IS_STEP_IN,Application
-Skilled Worker Visa,Required Documents,HAS_ATTRIBUTE,
-Skilled Worker Visa,Passport,IS_DOCUMENT,
-Skilled Worker Visa,Certificate of Sponsorship,IS_DOCUMENT,
-Skilled Worker Visa,English Proficiency Proof,IS_DOCUMENT,
-Skilled Worker Visa,Financial Evidence,IS_DOCUMENT,
-Skilled Worker Visa,Eligibility Criteria,HAS_ATTRIBUTE,
-Skilled Worker Visa,Job Offer,IS_CRITERIA,
-Skilled Worker Visa,Meets Salary Threshold,IS_CRITERIA,
-Family Visa,Processing Time,HAS_ATTRIBUTE,
-Family Visa,"12 weeks",PROCESSING_TIME_IS,
-Family Visa,Application,HAS_STEP,
-Family Visa,Online Application,IS_STEP_IN,Application
-Family Visa,Relationship Evidence,IS_STEP_IN,Application
-Family Visa,Financial Documentation,IS_STEP_IN,Application
-Family Visa,Required Documents,HAS_ATTRIBUTE,
-Family Visa,Passport,IS_DOCUMENT,
-Family Visa,Proof of Relationship,IS_DOCUMENT,
-Family Visa,Financial Documentation,IS_DOCUMENT,
-Family Visa,Eligibility Criteria,HAS_ATTRIBUTE,
-Family Visa,Genuine Relationship,IS_CRITERIA,
-Family Visa,UK Citizen/Settled Person,RELATED_TO,Genuine Relationship
-Visitor Visa,Processing Time,HAS_ATTRIBUTE,
-Visitor Visa,"3 weeks",PROCESSING_TIME_IS,
-Visitor Visa,Application,HAS_STEP,
-Visitor Visa,Online Application,IS_STEP_IN,Application
-Visitor Visa,Visa Fee Payment,IS_STEP_IN,Application
-Visitor Visa,Required Documents,HAS_ATTRIBUTE,
-Visitor Visa,Passport,IS_DOCUMENT,
-Visitor Visa,Travel Itinerary,IS_DOCUMENT,
-Visitor Visa,Accommodation Details,IS_DOCUMENT,
-Visitor Visa,Eligibility Criteria,HAS_ATTRIBUTE,
-Visitor Visa,Leisure/Business Purpose,IS_CRITERIA,
-Graduate Visa,Processing Time,HAS_ATTRIBUTE,
-Graduate Visa,"8 weeks",PROCESSING_TIME_IS,
-Graduate Visa,Application,HAS_STEP,
-Graduate Visa,Online Application,IS_STEP_IN,Application
-Graduate Visa,Fee Payment,IS_STEP_IN,Application
-Graduate Visa,Required Documents,HAS_ATTRIBUTE,
-Graduate Visa,Passport,IS_DOCUMENT,
-Graduate Visa,Proof of Degree,IS_DOCUMENT,
-Graduate Visa,Eligibility Criteria,HAS_ATTRIBUTE,
-Graduate Visa,"Complete course in UK",IS_CRITERIA,
-ETA,Processing Time,HAS_ATTRIBUTE,
-ETA,"Few days",PROCESSING_TIME_IS,
-ETA,Application,HAS_STEP,
-ETA,Online Application,IS_STEP_IN,Application
-ETA,Personal Details,IS_STEP_IN,Application
-ETA,Travel Plans,IS_STEP_IN,Application
-ETA,Family Permit,Visa Alternative,IS_ALTERNATIVE_TO,
-Marriage Visa,Visa Type,IS_VISA_TYPE,
-Child Study Visa,Visa Type,IS_VISA_TYPE,
+Subject,Relationship,Detail
+Visa Processing Times,Includes,Student Visa Processing Time
+Student Visa Processing Time,Is,"Typically 3 weeks for applications from outside the UK."
+Visa Processing Times,Includes,Skilled Worker Visa Processing Time
+Skilled Worker Visa Processing Time,Is,"Usually processed within 8 weeks."
+Visa Processing Times,Includes,Family Visa Processing Time
+Family Visa Processing Time,Is,"Processing can take up to 12 weeks."
+Visa Processing Times,Includes,Visitor Visa Processing Time
+Visitor Visa Processing Time,Is,"Generally processed within 3 weeks."
+Visa Processing Times,Includes,Graduate Visa Processing Time
+Graduate Visa Processing Time,Is,"Usually processed within 8 weeks."
+Visa Processing Times,Includes,Electronic Travel Authorisation (ETA) Processing Time
+ETA Processing Time,Is,"Expected to be processed quickly, often within a few days."
+
+Visa Types,Includes,Student Visa
+Visa Types,Includes,Skilled Worker Visa
+Visa Types,Includes,Graduate Visa
+Visa Types,Includes,Family Visa
+Visa Types,Includes,Visitor Visa
+Visa Types,Includes,Electronic Travel Authorisation (ETA)
+Visa Types,Includes,Marriage Visa
+Visa Types,Includes,Child Study Visa
+
+How to Apply for Student Visa,Involves,"Completing the online application form."
+How to Apply for Student Visa,Involves,"Paying the visa fee."
+How to Apply for Student Visa,Involves,"Submitting biometric information."
+How to Apply for Student Visa,Involves,"Providing proof of acceptance at a UK educational institution."
+
+How to Apply for Skilled Worker Visa,Involves,"Obtaining a Certificate of Sponsorship from an employer."
+How to Apply for Skilled Worker Visa,Involves,"Completing the online application."
+How to Apply for Skilled Worker Visa,Involves,"Paying the visa fee and health surcharge."
+How to Apply for Skilled Worker Visa,Involves,"Submitting necessary documents including proof of English proficiency."
+
+How to Apply for Family Visa,Involves,"Completing the online application."
+How to Apply for Family Visa,Involves,"Providing evidence of relationship with a UK citizen or settled person."
+How to Apply for Family Visa,Involves,"Submitting financial documentation proving income."
+
+How to Apply for Visitor Visa,Involves,"Filling out the online application form."
+How to Apply for Visitor Visa,Involves,"Paying the visa fee."
+How to Apply for Visitor Visa,Involves,"Providing travel itinerary and accommodation details."
+
+How to Apply for Graduate Visa,Involves,"Applying within 2 years of completing your course in the UK."
+How to Apply for Graduate Visa,Involves,"Completing the online application and paying the fee."
+
+How to Apply for Electronic Travel Authorisation (ETA),Involves,"Applying online via the official government website."
+How to Apply for Electronic Travel Authorisation (ETA),Involves,"Providing personal details and travel plans."
+
+Required Documents for Student Visa,Necessary Documents,"Passport"
+Required Documents for Student Visa,Necessary Documents,"CAS letter"
+Required Documents for Student Visa,Necessary Documents,"Financial evidence"
+Required Documents for Student Visa,Necessary Documents,"Proof of English proficiency"
+
+Required Documents for Skilled Worker Visa,Necessary Documents,"Passport"
+Required Documents for Skilled Worker Visa,Necessary Documents,"Certificate of Sponsorship"
+Required Documents for Skilled Worker Visa,Necessary Documents,"Proof of English proficiency"
+Required Documents for Skilled Worker Visa,Necessary Documents,"Financial evidence"
+
+Required Documents for Family Visa,Necessary Documents,"Passport"
+Required Documents for Family Visa,Necessary Documents,"Proof of relationship"
+Required Documents for Family Visa,Necessary Documents,"Financial documentation"
+
+Required Documents for Visitor Visa,Necessary Documents,"Passport"
+Required Documents for Visitor Visa,Necessary Documents,"Travel itinerary"
+Required Documents for Visitor Visa,Necessary Documents,"Accommodation details"
+
+Required Documents for Graduate Visa,Necessary Documents,"Passport"
+Required Documents for Graduate Visa,Necessary Documents,"Proof of degree completion"
+
+Eligibility Criteria for Student Visa,Criterion,"Must have an offer from an approved UK educational institution."
+Eligibility Criteria for Student Visa,Criterion,"Sufficient funds to support yourself."
+
+Eligibility Criteria for Skilled Worker Visa,Criterion,"Job offer from an approved employer in the UK."
+Eligibility Criteria for Skilled Worker Visa,Criterion,"Meets minimum salary threshold."
+
+Eligibility Criteria for Family Visa,Criterion,"Must be in a genuine relationship with a UK citizen or settled person."
+
+Eligibility Criteria for Visitor Visa,Criterion,"Must intend to visit for leisure or business purposes only."
+
+Additional Information about Visas,Sources of Fees and Charges,
+Additional Information about Visas,Facts about Fees and Charges,
+Visa Fees vary depending on visa type and duration of stay.,Fees Information,
+Health surcharge applies to most visa applications.,Health Information,
+Applicants may need to attend an interview as part of certain applications.,Interview Information,
+
+Student Visa,Age,Must be 16 or over
+Student Visa,Course Offer,Must have an unconditional offer from a licensed UK educational institution. Requires a Confirmation of Acceptance for Studies (CAS) letter.
+Student Visa,English Language Proficiency,Ability to speak, read, write, and understand English. May need to provide proof of language proficiency through exams like IELTS, TOEFL, PTE, etc.
+Student Visa,Financial Stability,Enough money to support yourself and pay for your course.
+Student Visa,Intention to Leave,Able to prove that you intend to leave the UK after your studies are completed.
+Student Visa,Parental Consent,If under 18, evidence of parental or legal guardian consent is required. This includes consent for the visa application, living and care arrangements in the UK, and travel to the UK.
+Skilled Worker Visa,Approved Employer,Work for a UK employer that’s been approved by the Home Office.
+Skilled Worker Visa,Certificate of Sponsorship (CoS),Have a ‘certificate of sponsorship’ (CoS) from your employer with information about the role you’ve been offered in the UK.
+Skilled Worker Visa,Eligible Occupation,Do a job that’s on the list of eligible occupations.
+Skilled Worker Visa,Minimum Salary,Be paid a minimum salary - how much depends on the type of work you do and the date you got your CoS.
+Skilled Worker Visa,Confirmed Job Offer,Must have a confirmed job offer before you apply for your visa.
+Skilled Worker Visa,Knowledge of English,Must be able to speak, read, write, and understand English.
+Family Visa,Passport/Travel Document,You must have a passport or travel document to enter the UK. It should be valid for the whole of your stay.
+Family Visa,Intention to Leave,You’ll leave the UK at the end of your visit.
+Family Visa,Financial Support,You’re able to support yourself and your dependants during your trip (or have funding from someone else to support you).
+Family Visa,Return/Onward Journey,You’re able to pay for your return or onward journey (or have funding from someone else to pay for the journey).
+Family Visa,No Extended Stays,You’ll not live in the UK for extended periods through frequent or successive visits, or make the UK your main home.
+Standard Visitor Visa,Passport/Travel Document,You must have a passport or travel document to enter the UK. It should be valid for the whole of your stay.
+Standard Visitor Visa,Intention to Leave,You’ll leave the UK at the end of your visit.
+Standard Visitor Visa,Financial Support,You’re able to support yourself and your dependants during your trip (or have funding from someone else to support you).
+Standard Visitor Visa,Return/Onward Journey,You’re able to pay for your return or onward journey (or have funding from someone else to pay for the journey).
+Standard Visitor Visa,No Extended Stays,You’ll not live in the UK for extended periods through frequent or successive visits, or make the UK your main home.
+
+Immigration Health Surcharge,Overview,HAS_SECTION,
+IHS,Payment Requirement,IS_ABOUT,Most immigration applications
+IHS,Start Using NHS,LEADS_TO,Date visa starts
+NHS,Usage,REQUIRES,IHS Payment (if applicable)
+NHS Treatment,Payment,REQUIRED_IF,Visa decision pending
+Healthcare Services,Payment Required,INCLUDE,Prescriptions,Dental treatment,Eye tests,Assisted conception
+Accessing Healthcare,Proof of Status,REQUIRES,Biometric Residence Permit OR Share Code
+Immigration Health Surcharge,Cost,HAS_ATTRIBUTE,
+Cost,Dependence,ON,Length of Visa
+Cost,Per Year (Students/Youth Mobility),IS,£776
+Cost,Per Year (Under 18),IS,£776
+Cost,Per Year (Other Visa Applicants),IS,£1035
+Cost,6 Months or Less (Outside UK),NOT_REQUIRED,
+Cost,6 Months or Less (Inside UK - Students/Under 18),HALF_YEARLY_COST,£388
+Cost,6 Months or Less (Inside UK - Other),HALF_YEARLY_COST,£517.50
+Cost,More Than 6 Months Less Than 1 Year,FULL_YEARLY_COST,
+Cost,Visa More Than 1 Year,PAYMENT,Yearly Cost + Half Yearly Cost (if <= 18 months) OR Cost of 2 Full Years (if > 18 months but < 2 years)
+Dependants (Aged 18+),IHS Cost,SAME_AS,Main Applicant
+IHS,Non-Payment,LEADS_TO,Email from UK Visas and Immigration
+Email from UK Visas,Explanation,INCLUDES,How to pay the surcharge
+Surcharge Payment,Deadline (Inside UK),10 Working Days,From Email Receipt
+Surcharge Payment,Deadline (Outside UK),7 Working Days,From Email Receipt
+Non-Payment,Visa Application,WILL_BE,Turned Down
+Immigration Health Surcharge,Who Needs To Pay,HAS_ATTRIBUTE,
+Visa Application,IHS Required,CONDITION,More Than 6 Months (Outside UK) OR Any Length of Time (Inside UK)
+Visa Application,IHS Not Required,INCLUDE,Visitor Visa,Remain in UK Permanently
+Private Medical Insurance,IHS Payment,NOT_EXEMPTED,
+NHS Usage,Requirement,IHS or Reference Number
+Exemption,Indefinite Leave to Enter or Remain,REASON,
+Exemption,Health and Care Worker Visa,REASON,Eligible Workers and Dependants
+Exemption,EU Settlement Scheme,REASON,
+Exemption,Diplomats/Visiting Armed Forces,REASON,Not Subject to Immigration Control
+Exemption,Dependant of UK Armed Forces Member,REASON,
+Exemption,Dependant of Other Country Armed Forces Member,REASON,Exempt from Immigration Control
+Exemption,British Overseas Territory Citizen,REASON,Resident in Falkland Islands
+Exemption,Asylum Seeker/Humanitarian Protection,REASON,And Dependants
+Exemption,Domestic Worker,REASON,Victim of Slavery or Human Trafficking
+Exemption,Discretionary Leave to Remain,REASON,Victim of Slavery or Human Trafficking
+Exemption,Domestic Violence Concession,REASON,And Dependants
+Exemption,Article 3 of European Convention,REASON,Against Rights to Leave UK
+Exemption,S2 Healthcare Visitor,REASON,
+Exemption,Frontier Worker Permit,REASON,With S1 Certificate
+Exemption,Child Under 18,REASON,Taken into Care by Local Authority
+Exemption,Relevant Civilian Employee at NATO,REASON,Or Australian Department of Defence in UK
+Exemption,Victim of Human Trafficking/Slavery,REASON,Applying to Stay in UK
+Exemption,Stateless Person,REASON,Applying to Stay in UK
+Exemption,Ukraine Extension Scheme/Homes for Ukraine Sponsorship Scheme,REASON,
+Indefinite Leave to Remain (Limited Leave Granted),IHS Payment Required,CONDITION,Before Leave is Given
+Visitor Visas and Short Term Visas,IHS Payment Not Required,REASON,Visa for 6 months or less from outside the UK
+NHS Care,Payment,REQUIRED_AT_POINT_OF_USE,Unless Service is Free
+Isle of Man/Channel Islands Visa,IHS Payment Not Required,REASON,
+
