@@ -1,0 +1,76 @@
+Source,Target,Relationship,Additional_Context
+Visa,Processing Time,HAS_ATTRIBUTE,
+Student Visa,Processing Time,HAS_ATTRIBUTE,
+Student Visa,"3 weeks (outside UK)",PROCESSING_TIME_IS,
+Student Visa,Application,HAS_STEP,
+Student Visa,Online Application Form,IS_STEP_IN,Application
+Student Visa,Visa Fee Payment,IS_STEP_IN,Application
+Student Visa,Biometric Information Submission,IS_STEP_IN,Application
+Student Visa,Acceptance Proof,IS_STEP_IN,Application
+Student Visa,UK Educational Institution,RELATED_TO,Acceptance Proof
+Student Visa,Required Documents,HAS_ATTRIBUTE,
+Student Visa,Passport,IS_DOCUMENT,
+Student Visa,CAS Letter,IS_DOCUMENT,
+Student Visa,Financial Evidence,IS_DOCUMENT,
+Student Visa,English Proficiency Proof,IS_DOCUMENT,
+Student Visa,Eligibility Criteria,HAS_ATTRIBUTE,
+Student Visa,Offer from UK Institution,IS_CRITERIA,
+Student Visa,Sufficient Funds,IS_CRITERIA,
+Skilled Worker Visa,Processing Time,HAS_ATTRIBUTE,
+Skilled Worker Visa,"8 weeks",PROCESSING_TIME_IS,
+Skilled Worker Visa,Application,HAS_STEP,
+Skilled Worker Visa,Certificate of Sponsorship,IS_STEP_IN,Application
+Skilled Worker Visa,Online Application,IS_STEP_IN,Application
+Skilled Worker Visa,Visa Fee Payment,IS_STEP_IN,Application
+Skilled Worker Visa,Health Surcharge Payment,IS_STEP_IN,Application
+Skilled Worker Visa,Required Documents,HAS_ATTRIBUTE,
+Skilled Worker Visa,Passport,IS_DOCUMENT,
+Skilled Worker Visa,Certificate of Sponsorship,IS_DOCUMENT,
+Skilled Worker Visa,English Proficiency Proof,IS_DOCUMENT,
+Skilled Worker Visa,Financial Evidence,IS_DOCUMENT,
+Skilled Worker Visa,Eligibility Criteria,HAS_ATTRIBUTE,
+Skilled Worker Visa,Job Offer,IS_CRITERIA,
+Skilled Worker Visa,Meets Salary Threshold,IS_CRITERIA,
+Family Visa,Processing Time,HAS_ATTRIBUTE,
+Family Visa,"12 weeks",PROCESSING_TIME_IS,
+Family Visa,Application,HAS_STEP,
+Family Visa,Online Application,IS_STEP_IN,Application
+Family Visa,Relationship Evidence,IS_STEP_IN,Application
+Family Visa,Financial Documentation,IS_STEP_IN,Application
+Family Visa,Required Documents,HAS_ATTRIBUTE,
+Family Visa,Passport,IS_DOCUMENT,
+Family Visa,Proof of Relationship,IS_DOCUMENT,
+Family Visa,Financial Documentation,IS_DOCUMENT,
+Family Visa,Eligibility Criteria,HAS_ATTRIBUTE,
+Family Visa,Genuine Relationship,IS_CRITERIA,
+Family Visa,UK Citizen/Settled Person,RELATED_TO,Genuine Relationship
+Visitor Visa,Processing Time,HAS_ATTRIBUTE,
+Visitor Visa,"3 weeks",PROCESSING_TIME_IS,
+Visitor Visa,Application,HAS_STEP,
+Visitor Visa,Online Application,IS_STEP_IN,Application
+Visitor Visa,Visa Fee Payment,IS_STEP_IN,Application
+Visitor Visa,Required Documents,HAS_ATTRIBUTE,
+Visitor Visa,Passport,IS_DOCUMENT,
+Visitor Visa,Travel Itinerary,IS_DOCUMENT,
+Visitor Visa,Accommodation Details,IS_DOCUMENT,
+Visitor Visa,Eligibility Criteria,HAS_ATTRIBUTE,
+Visitor Visa,Leisure/Business Purpose,IS_CRITERIA,
+Graduate Visa,Processing Time,HAS_ATTRIBUTE,
+Graduate Visa,"8 weeks",PROCESSING_TIME_IS,
+Graduate Visa,Application,HAS_STEP,
+Graduate Visa,Online Application,IS_STEP_IN,Application
+Graduate Visa,Fee Payment,IS_STEP_IN,Application
+Graduate Visa,Required Documents,HAS_ATTRIBUTE,
+Graduate Visa,Passport,IS_DOCUMENT,
+Graduate Visa,Proof of Degree,IS_DOCUMENT,
+Graduate Visa,Eligibility Criteria,HAS_ATTRIBUTE,
+Graduate Visa,"Complete course in UK",IS_CRITERIA,
+ETA,Processing Time,HAS_ATTRIBUTE,
+ETA,"Few days",PROCESSING_TIME_IS,
+ETA,Application,HAS_STEP,
+ETA,Online Application,IS_STEP_IN,Application
+ETA,Personal Details,IS_STEP_IN,Application
+ETA,Travel Plans,IS_STEP_IN,Application
+ETA,Family Permit,Visa Alternative,IS_ALTERNATIVE_TO,
+Marriage Visa,Visa Type,IS_VISA_TYPE,
+Child Study Visa,Visa Type,IS_VISA_TYPE,
